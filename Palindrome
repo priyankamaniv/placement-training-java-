@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int copy=num;
+        int id;
+        int rev=0;
+        while(num>0)
+        {
+            id=num%10;
+            num=num/10;
+            rev=rev*10+id;
+        }
+        
+        if(rev==copy)
+            System.out.println("Palindrome");
+        else
+              System.out.println("Not a Palindrome");
+        
+            
+    }
+}
