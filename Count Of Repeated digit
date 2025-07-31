@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int dig=sc.nextInt();
+        int id;
+        int flag=0;
+        while(num>0)
+        {
+           id=num%10;
+            num=num/10;
+            if(id==dig)
+            {
+                flag++;
+            }
+        }
+        System.out.println(flag);
+    }
+}
