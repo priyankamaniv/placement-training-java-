@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        if(n<=200)
+        {
+            double fee=n*0.5;
+            System.out.println("Rs."+(int)fee);
+        }
+        else if(n>200 && n<=400)
+        {
+            double pay=n*0.65;
+            double fi=pay+100;
+            System.out.println("Rs."+(int)fi);
+        }
+        else if(n>400 && n<=600)
+        {
+            double pi=n*0.80;
+            double rr=pi+200;
+            System.out.println("Rs."+(int)rr);
+        }
+        else
+        {
+            double re=n*1.25;
+            double ss=re+425;
+            System.out.println("Rs."+(int)ss);
+        }
+    }
+}
