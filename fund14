@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int d=sc.nextInt();
+        int e=sc.nextInt();
+        int f=sc.nextInt();
+        int g=sc.nextInt();
+        int h=sc.nextInt();
+        int i=sc.nextInt();
+        int j=a*b/100;
+        int z=a-j;
+        int k=z+c;
+        System.out.println("In Flipkart: Rs."+k);
+        int l=d*e/100;
+        int x=d-l;
+        int m=x+f;
+        System.out.println("In Snapdeal: Rs."+m);
+        int n=g*h/100;
+        int y=g-n;
+        int p=y+i;
+        System.out.println("In Amazon: Rs."+p);
+        if(k<m && k<p)
+            System.out.println("Choose Flipkart");
+        else if(m<k && m<p)
+            System.out.println("Choose Snapdeal");
+        else if(k==m || m==p || k==p)
+            System.out.println("Choose Flipkart");
+        else
+            System.out.println("Choose Amazon");
+    }
+}
