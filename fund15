@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int a = sc.nextInt(); // month
+        int b = sc.nextInt(); // price per unit
+        int c = sc.nextInt(); // quantity
+        
+        if (a <= 0 || a > 12) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        
+        int pricePerUnit = b;
+        
+        // For high months, increase price by 20%
+        if (a == 4 || a == 5 || a == 6 || a == 11 || a == 12) {
+            pricePerUnit = pricePerUnit + (pricePerUnit * 20 / 100);
+        }
+        
+        int total = pricePerUnit * c;
+        System.out.println(total);
+    }
+}
